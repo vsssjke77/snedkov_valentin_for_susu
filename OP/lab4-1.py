@@ -7,7 +7,7 @@
 """
 
 squares = [1, 4, 9, 16, 25]  # Создание нового списка
-
+squares.insert(len(squares)//2,-1)
 print(squares)
 
 # Выведите на экран подсписок [4, 9, 16].
@@ -53,4 +53,7 @@ print(animals)
 
 animals = []
 print(animals)
-
+a = set([2,1])
+b = set([2,3,4])
+d = b.symmetric_difference(a)
+print(d)

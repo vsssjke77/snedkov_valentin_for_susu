@@ -60,3 +60,10 @@ grocery_dict = {"fish": 1, "tomato": 6, 'apples': 3}  # Создание нов�
 # Проверьте, есть ли в словаре запись с ключом "fish" и "potato"
 
 print("fish" in grocery_dict, "potato" in grocery_dict)
+a = (1,2,3)
+b = (2,3,4)
+alphabet = (a,b)
+alphabet1 = (b,a)
+z = {alphabet: 123, alphabet1 : 234}
+
+print(z)
