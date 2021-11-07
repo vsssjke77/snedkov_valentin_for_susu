@@ -26,8 +26,8 @@ def arrival_time(departure_hours, departure_minutes, hours_on_the_way, minutes_o
     else:
         arrival_minutes = departure_minutes + minutes_on_the_way
     arrival_hours = departure_hours + hours_on_the_way
-    if arrival_hours > 24:
-        while arrival_hours > 24:
+    if arrival_hours >= 24:
+        while arrival_hours >= 24:
             arrival_hours -= 24
     return arrival_hours, arrival_minutes
 
