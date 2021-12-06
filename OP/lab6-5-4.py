@@ -19,22 +19,21 @@ def actions(r, x, y, k=1):
     return k
 
 
-def output(f1, quantity, time, execution_time):
+def output(f1, quantity, time):
     f1.write(f'{time}\n')
     f1.write(f'{quantity}\n')
+    execution_time = datetime.datetime.now() - time
     f1.write(f'{execution_time}\n')
 
 
 def main():
-    start_time = datetime.datetime.now()
     if os.path.exists("input.txt"):
         f = open("input.txt", "r")
         r, x, y = find(f)
         r, x, y = int(r), int(x), int(y)
         quantity = actions(r, x, y)
-        execution_time = datetime.datetime.now() - start_time
         f1 = open("output.txt", "w")
-        output(f1, quantity, start_time, execution_time)
+        output(f1, quantity, start_time)
         f.close()
         f1.close()
 
@@ -43,4 +42,5 @@ def main():
 
 
 if __name__ == "__main__":
+    start_time = datetime.datetime.now()
     main()
