@@ -1,6 +1,0 @@
-name = str(input("What`s your name?"))
-surname = str(input("What`s your surname?"))
-group = str(input("What`s your group?"))
-print('Привет,', name, surname, 'из группы %s!' %group)
-email = str(input("Введи свою электронную почту?"))
-print(surname[:5].lower(), 2*name[:5].lower(), 3*email[:5].lower())
